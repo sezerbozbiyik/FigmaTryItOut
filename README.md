@@ -19,7 +19,7 @@
 ![profile](https://user-images.githubusercontent.com/71348963/147661984-5526fa77-32a5-4d38-8c99-aa6cb7f44917.jpeg)
 
 <style type="text/css">
-    img {
+    home1 {
         width: 100px;
     }
 </style>
