@@ -17,9 +17,3 @@
 ![search](https://user-images.githubusercontent.com/71348963/147661980-81475b16-80a9-4815-a953-a2ed9700ed40.jpeg)
 ![chat](https://user-images.githubusercontent.com/71348963/147661981-d6671927-e43a-4b4a-b078-0f1fb4e4d2d6.jpeg)
 ![profile](https://user-images.githubusercontent.com/71348963/147661984-5526fa77-32a5-4d38-8c99-aa6cb7f44917.jpeg)
-
-<style type="text/css">
-    home1 {
-        width: 100px;
-    }
-</style>
