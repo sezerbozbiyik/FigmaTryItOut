@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import MainContainer from './navigation/MainContainer'
+import MainContainer from './src/MainContainer'
 import * as Font from "expo-font";
 import AppLoading from 'expo-app-loading';
 
