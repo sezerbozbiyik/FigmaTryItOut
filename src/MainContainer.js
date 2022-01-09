@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image, StyleSheet, StatusBar } from "react-native";
+import { View, StyleSheet, StatusBar } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 //Screens
@@ -17,63 +17,43 @@ const Tab = createBottomTabNavigator();
 
 export default function MainContainer() {
   return (
-    <NavigationContainer screenOptions={{ backgroundColor: "white" }}>
+    <>
       <StatusBar backgroundColor={"white"} barStyle="dark-content"></StatusBar>
-      <Tab.Navigator
-        sceneContainerStyle={{ backgroundColor: "white" }}
-        screenOptions={({ route }) => ({
-          tabBarStyle: styles.bottomBar,
-          tabBarItemStyle: styles.bottomBarItem,
-          tabBarIcon: ({ focused, color, size }) => {
-            let iconName;
-            if (route.name === "Home") {
-              iconName = focused ? "home" : "home-outline";
-            } else if (route.name === "Profile") {
-              iconName = focused ? "person" : "person-outline";
-            } else if (route.name === "Chat") {
-              iconName = focused ? "chatbubble" : "chatbubble-outline";
-            } else if (route.name === "Search") {
-              iconName = focused ? "search" : "search-outline";
-            } else if (route.name === "Post") {
-              return <CustomAddIcon {...{ focused }} />;
-            }
-
-            // You can return any component that you like here!
-            return <Ionicons name={iconName} size={18} color={color} />;
-          },
-          tabBarShowLabel: false,
-          tabBarActiveTintColor: "black",
-          tabBarInactiveTintColor: "black",
-          
-        })}
-      >
-        <Tab.Screen
-          options={{ headerShown: false }}
-          name="Home"
-          component={HomeScreen}
-        />
-        <Tab.Screen
-          options={{ headerShown: false }}
-          name="Search"
-          component={SearchScreen}
-        />
-        <Tab.Screen
-          options={{ headerShown: false }}
-          name="Post"
-          component={PostScreen}
-        />
-        <Tab.Screen
-          options={{ headerShown: false }}
-          name="Chat"
-          component={ChatScreen}
-        />
-        <Tab.Screen
-          options={{ headerShown: false }}
-          name="Profile"
-          component={ProfileScreen}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
+      <NavigationContainer>
+        <Tab.Navigator
+          sceneContainerStyle={{ backgroundColor: "white" }}
+          screenOptions={({ route }) => ({
+            tabBarStyle: styles.bottomBar,
+            tabBarItemStyle: styles.bottomBarItem,
+            tabBarIcon: ({ focused, color, size }) => {
+              let iconName;
+              if (route.name === "Home") {
+                iconName = focused ? "home" : "home-outline";
+              } else if (route.name === "Profile") {
+                iconName = focused ? "person" : "person-outline";
+              } else if (route.name === "Chat") {
+                iconName = focused ? "chatbubble" : "chatbubble-outline";
+              } else if (route.name === "Search") {
+                iconName = focused ? "search" : "search-outline";
+              } else if (route.name === "Post") {
+                return <CustomAddIcon {...{ focused }} />;
+              }
+              return <Ionicons name={iconName} size={18} color={color} />;
+            },
+            tabBarShowLabel: false,
+            tabBarActiveTintColor: "black",
+            tabBarInactiveTintColor: "black",
+            headerShown: false,
+          })}
+        >
+          <Tab.Screen name="Home" component={HomeScreen} />
+          <Tab.Screen name="Search" component={SearchScreen} />
+          <Tab.Screen name="Post" component={PostScreen} />
+          <Tab.Screen name="Chat" component={ChatScreen} />
+          <Tab.Screen name="Profile" component={ProfileScreen} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </>
   );
 }
 
@@ -140,3 +120,4 @@ const styles = StyleSheet.create({
 });
 
 // androidde iconlar doğru boyutlarında değil !!
+// bottombar 50 height olucak!!

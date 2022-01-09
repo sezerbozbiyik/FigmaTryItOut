@@ -49,7 +49,7 @@ const Photos = () => {
   return (
     <FlatList
       keyExtractor={(item) => item.id}
-      data={photos}
+      data={photos.dogs}
       numColumns={3}
       columnWrapperStyle={{ justifyContent: "space-between", marginBottom: 11 }}
       renderItem={({ item }) => (

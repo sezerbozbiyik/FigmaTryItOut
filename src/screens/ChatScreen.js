@@ -1,14 +1,33 @@
-import React from "react";
+import React,{useState} from "react";
 import { View, Text, SafeAreaView, FlatList, Image } from "react-native";
 import {
   Roboto_700Bold,
   Roboto_400Regular,
   useFonts,
 } from "@expo-google-fonts/roboto";
-import AppLoading from "expo-app-loading";
+
 import messages from "../../data/messages";
 
+import * as Font from "expo-font";
+import AppLoading from "expo-app-loading";
+
+let customFonts = async () => {
+  await Font.loadAsync({
+    ChatsFont: require("../../assets/fonts/FontsFree-Net-SFProText-Semibold.ttf"),
+  });
+};
+
 export default function ChatScreen() {
+  const [dataLoaded, setDataLoaded] = useState(false);
+  if (!dataLoaded) {
+    return (
+      <AppLoading
+        startAsync={customFonts}
+        onFinish={() => setDataLoaded(true)}
+        onError={(err) => console.log(err)}
+      />
+    );
+  }
   return (
     <SafeAreaView>
       <FlatList

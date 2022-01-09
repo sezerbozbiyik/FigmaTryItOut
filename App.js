@@ -1,26 +1,11 @@
-import React,{useState} from 'react'
-import MainContainer from './src/MainContainer'
-import * as Font from "expo-font";
-import AppLoading from 'expo-app-loading';
+import React,{useState} from "react";
+import MainContainer from "./src/MainContainer";
+import Auth from "./src/screens/auth/Auth";
 
-let customFonts = async () => {
-  await Font.loadAsync({
-    "ChatsFont": require("./assets/fonts/FontsFree-Net-SFProText-Semibold.ttf"),
-  });
-};
-
-export default function App(){
-  const [dataLoaded, setDataLoaded] = useState(false);
-  if (!dataLoaded) {
-    return (
-      <AppLoading
-        startAsync={customFonts}
-        onFinish={() => setDataLoaded(true)}
-        onError={(err) => console.log(err)}
-      />
-    );
+export default function App() {
+  const [user, setuser] = useState(false)
+  if (!user) {
+    return (<Auth></Auth>)
   }
-  return (
-    <MainContainer></MainContainer>
-  )
+  return <MainContainer></MainContainer>;
 }

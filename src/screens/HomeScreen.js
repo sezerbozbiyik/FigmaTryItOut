@@ -93,7 +93,7 @@ const Home = () => {
           <FlatList
             keyExtractor={(item) => item.id}
             style={styles.libraryContainer}
-            data={photos}
+            data={photos.browseAll}
             numColumns={2}
             columnWrapperStyle={{
               justifyContent: "space-between",
