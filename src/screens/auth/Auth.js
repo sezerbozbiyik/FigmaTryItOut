@@ -8,6 +8,7 @@ import {
   Text,
   TouchableHighlight,
   TouchableOpacity,
+  StatusBar,
 } from "react-native";
 
 import { Comfortaa_400Regular, useFonts } from "@expo-google-fonts/comfortaa";
@@ -43,7 +44,12 @@ export default function Auth() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Group screenOptions={{ headerShown: false }}>
+        <Stack.Group
+          screenOptions={{
+            headerShown: false,
+            contentStyle: { backgroundColor: "white" },
+          }}
+        >
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Register" component={RegisterScreen} />

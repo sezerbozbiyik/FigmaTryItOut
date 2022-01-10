@@ -6,7 +6,6 @@
 
 ## What to next
 
-- Will be created to login and register pages
 - Will be created to database
 - will be connected to firebase
 
