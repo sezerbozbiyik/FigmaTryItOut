@@ -8,7 +8,6 @@ import {
   Text,
   TouchableHighlight,
   TouchableOpacity,
-  StatusBar,
 } from "react-native";
 
 import { Comfortaa_400Regular, useFonts } from "@expo-google-fonts/comfortaa";
@@ -17,13 +16,12 @@ import {
   Roboto_700Bold,
   Roboto_400Regular,
 } from "@expo-google-fonts/roboto";
-import AppLoading from "expo-app-loading";
-
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import LoginScreen from "./LoginScreen";
 import RegisterScreen from "./RegisterScreen";
+import AppLoading from "expo-app-loading";
 
 const width = Dimensions.get("screen").width;
 const height = Dimensions.get("screen").height;
@@ -31,13 +29,13 @@ const height = Dimensions.get("screen").height;
 const Stack = createNativeStackNavigator();
 
 export default function Auth() {
+  
   let [fontsLoaded] = useFonts({
     Comfortaa_400Regular,
     Roboto_900Black,
     Roboto_700Bold,
     Roboto_400Regular,
   });
-
   if (!fontsLoaded) {
     return <AppLoading></AppLoading>;
   }

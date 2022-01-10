@@ -2,7 +2,8 @@ export default {
   id: "1",
   name: "Jane",
   city: "San Francisco, Ca",
-  avatar:"https://s3-alpha-sig.figma.com/img/0845/f26e/ba1d8547c2f8fbd104375e30cdb2ee85?Expires=1641772800&Signature=PNaKI~DCPNVBcw69osouBHhlzfcns58v7ut0dU2TyRcnvDJzwPkWEQn2a0TZElFa8WZoC-eYOuCdosaPeym4u7hNu0rlf-ZrttaioBUpTRLJGwJYZweukDX1umIs1fDmBsxG3QiKpCEUQgaZp2VMx4fGMAVhLf-g1372HbvU9eb9XmCzudiAQiLonQ1f8BV5WWsVZZtYTXYJHN7s9aihHjDyTbCcJM4njeqv~a1~npV~6hgQoXgGn3-EC3y7Llpf88syMrMoUeLPharf8V5l~XP-sOOHbbC4Leduxi48yZqeDN6aKvPiUTMguA8hpiSDlcRxRqjjNJTpKASnrGclYQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+  avatar:
+    "https://s3-alpha-sig.figma.com/img/0845/f26e/ba1d8547c2f8fbd104375e30cdb2ee85?Expires=1641772800&Signature=PNaKI~DCPNVBcw69osouBHhlzfcns58v7ut0dU2TyRcnvDJzwPkWEQn2a0TZElFa8WZoC-eYOuCdosaPeym4u7hNu0rlf-ZrttaioBUpTRLJGwJYZweukDX1umIs1fDmBsxG3QiKpCEUQgaZp2VMx4fGMAVhLf-g1372HbvU9eb9XmCzudiAQiLonQ1f8BV5WWsVZZtYTXYJHN7s9aihHjDyTbCcJM4njeqv~a1~npV~6hgQoXgGn3-EC3y7Llpf88syMrMoUeLPharf8V5l~XP-sOOHbbC4Leduxi48yZqeDN6aKvPiUTMguA8hpiSDlcRxRqjjNJTpKASnrGclYQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
   photos: [
     {
       id: "1",
@@ -10,7 +11,7 @@ export default {
     },
     {
       id: "2",
-      url: "https://s3-alpha-sig.figma.com/img/4617/a4ed/0486a26c76e2f11f0a3c218ce8b03e0f?Expires=1641772800&Signature=ezDcCA2yvCToAASpcIMblFFuu3i9BLCqonXQY8pPe5lfJiG6tfXkB1u-Hg169VUTPkJY9MoTsTGTWUnCbY~sld8aZ97TCgBX1GSl2KY0pVQcwHrajrhXh2GMif5X8P9y8LtiGEJ1C4n~hI~cOwEmkyltaFWCUevyBaDbrHnAwAlXvO5gcxYFUYJr6lxCT~EjhfQgrvhR1FKm-nNwXvzw3ZZGZ5bmBMhBlfCMRUopdX2UOKg99hYaGSu~86yNE2s8Vc8jaYgYLgrtNu8f9CtYOagdOZ0yExLCPKgDmp9Iilr3A6BERGs8MwPk2UPdHNcfzI5OMBRPEOO3~5EHZw7KpQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      url: "https://s3-alpha-sig.figma.com/img/4617/a4ed/0486a26c76e2f11f0a3c218ce8b03e0f?Expires=1642982400&Signature=ONYX990UQXmp6x8muWgWp8g4imVY69z0V9fIWC01YVP6ho9rkOJHgjjtJtCMpMD9Spxc0exD-GMIjw343issHnIxZmZEAWxTtaUdb7K9rj7p40wJxLkirinisfv2ngquNq0mVmBx6D2QWC508usByfOuw1-8ocjnZyyFpowIVYiITUvBPuDxXTxoDaC4wS3npzuGOyFV0h5jXkIe10qoj6KOlCyn9docPu2rgV67knkQYdQV5VUtzNku8OL77GpFDovo~yaO0Kf3ct1IMpb4y2i85A0s4m~zQsoNO~ZCE6w115W4ksNJ5soN3NbPdQ9WwmyDzywa37vu9yyQA-dvIw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
     },
     {
       id: "3",

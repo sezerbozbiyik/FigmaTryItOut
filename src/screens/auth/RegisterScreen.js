@@ -8,12 +8,12 @@ import {
   SafeAreaView,
   TextInput,
   Dimensions,
-  Alert,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/AntDesign";
 import { Comfortaa_400Regular, useFonts } from "@expo-google-fonts/comfortaa";
 import { Roboto_900Black } from "@expo-google-fonts/roboto";
 import AppLoading from "expo-app-loading";
+import { auth } from "../../../firebase";
 
 const width = Dimensions.get("screen").width;
 
@@ -25,6 +25,16 @@ export default function RegisterScreen({ navigation }) {
     Comfortaa_400Regular,
     Roboto_900Black,
   });
+
+  var handleSignUp = () => {
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userCredentials) => {
+        var user = userCredentials.user;
+        alert("Kayıt Başarılı");
+      })
+      .catch((error) => alert(error.message));
+  };
 
   if (!fontsLoaded) {
     return <AppLoading></AppLoading>;
@@ -56,31 +66,12 @@ export default function RegisterScreen({ navigation }) {
           placeholderTextColor={"rgba(0, 0, 0, 0.5)"}
           onChangeText={setPassword}
         />
-        <TouchableOpacity
-          onPress={() => register({ email, password })}
-          style={styles.button}
-        >
+        <TouchableOpacity onPress={handleSignUp} style={styles.button}>
           <Text style={styles.buttonText}>NEXT</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
-}
-
-function register({ email, password }) {
-  /* Alert.alert(
-    "HATA",
-    "Yanlış giriş yaptınız!",
-    [
-      {
-        text: "Cancel",
-        onPress: () => console.log("Cancel Pressed"),
-        style:"cancel"
-      },
-      { text: "OK", onPress: () => console.log("OK Pressed"),style:"destructive" }
-    ]
-  ) */
-  console.log({ email, password });
 }
 
 const styles = StyleSheet.create({

@@ -16,6 +16,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 const Tab = createBottomTabNavigator();
 
 export default function MainContainer() {
+
   return (
     <>
       <StatusBar backgroundColor={"white"} barStyle="dark-content"></StatusBar>

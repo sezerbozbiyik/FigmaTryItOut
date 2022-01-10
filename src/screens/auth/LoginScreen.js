@@ -10,9 +10,11 @@ import {
   Dimensions,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/AntDesign";
+
 import { Comfortaa_400Regular, useFonts } from "@expo-google-fonts/comfortaa";
 import { Roboto_900Black } from "@expo-google-fonts/roboto";
 import AppLoading from "expo-app-loading";
+import {auth} from "../../../firebase";
 
 const width = Dimensions.get("screen").width;
 
@@ -24,6 +26,16 @@ export default function LoginScreen({ navigation }) {
     Comfortaa_400Regular,
     Roboto_900Black,
   });
+
+  const handleSignIn= () => {
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredentials) => {
+        const user = userCredentials.user;
+        alert("Başarılı Giriş!");
+      })
+      .catch((error) => alert(error.message));
+  };
 
   if (!fontsLoaded) {
     return <AppLoading></AppLoading>;
@@ -55,20 +67,12 @@ export default function LoginScreen({ navigation }) {
           placeholderTextColor={"rgba(0, 0, 0, 0.5)"}
           onChangeText={setPassword}
         />
-        <TouchableOpacity
-          onPress={() => login({ email, password })}
-          style={styles.button}
-        >
+        <TouchableOpacity onPress={handleSignIn} style={styles.button}>
           <Text style={styles.buttonText}>LOG IN</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
-}
-
-function login({ email, password }) {
-  
-  console.log({ email, password });
 }
 
 const styles = StyleSheet.create({

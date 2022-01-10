@@ -14,6 +14,7 @@ import { Roboto_900Black, useFonts } from "@expo-google-fonts/roboto";
 import { Comfortaa_400Regular } from "@expo-google-fonts/comfortaa";
 import AppLoading from "expo-app-loading";
 import profile from "../../data/profile";
+import { auth } from "../../firebase";
 
 export default function ProfileScreen() {
   let [fontsLoaded] = useFonts({
@@ -35,6 +36,17 @@ export default function ProfileScreen() {
   }
 }
 
+const handleSingOut = () => {
+  auth
+    .signOut()
+    .then(() => {
+      alert("Çıkış Yapıldı.");
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
+};
+
 const Header = () => {
   return (
     <View style={{ alignItems: "center" }}>
@@ -47,7 +59,7 @@ const Header = () => {
       <TouchableHighlight
         underlayColor={"grey"}
         style={button2}
-        onPress={() => {}}
+        onPress={handleSingOut}
       >
         <Text style={page.roboto}>MESSAGE</Text>
       </TouchableHighlight>
