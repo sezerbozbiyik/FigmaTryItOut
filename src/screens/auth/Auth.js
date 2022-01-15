@@ -69,7 +69,7 @@ function HomeScreen({ navigation }) {
           }}
         >
           <View style={styles.logo}>
-            <Image source={require("../../../assets/login_logo.png")}></Image>
+            <Image source={require("../../../assets/photos/login_logo.png")}></Image>
             <Text style={styles.logoText}>photo</Text>
           </View>
         </ImageBackground>
